@@ -24,7 +24,7 @@ def post_to_wp(title,content,field):
     post.custom_fields = field
 
     post.id = wp.call(posts.NewPost(post))
-    print(str(title) + '\nhttp://127.0.0.1/?p=' + str(post.id) + '\n')
+    print(str(title) + '\nhttp://localhost/?p=' + str(post.id) + '\n')
 
 #页面单页解析
 def jiexi(url):
