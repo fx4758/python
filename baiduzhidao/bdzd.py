@@ -2,7 +2,6 @@ from wordpress_xmlrpc import Client, WordPressPost
 from wordpress_xmlrpc.methods import media, posts
 from urllib.parse import quote
 from requests_html import HTMLSession
-import re
 import ssl
 from langconv import *
 
@@ -43,7 +42,8 @@ def jiexi(url):
         print('开始采集：'+str(url))
         html = htmldown(url)
         title = html.find('span.ask-title')[0].text
-        title = jt_to_ft(title)
+
+        # title = jt_to_ft(title)
 
         content = html.find('.content .best-text')[0].html
         content = re.sub('<(d|s|h|/|p|a|li|ol|ul).*?>','',content)
@@ -53,7 +53,8 @@ def jiexi(url):
         content = re.sub(' +',' ',content)
         content = re.sub('<b[\s\S]*?>','\n\n',content)
         content = re.sub('(<img[\s\S]*?>)','\n\n\g<1>\n\n',content)
-        content = jt_to_ft(content)
+
+        # content = jt_to_ft(content)
 
         pic_list = re.findall('src="(.*?)"',content)
         for pic in pic_list:

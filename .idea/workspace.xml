@@ -9,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python$bdzd.coverage" NAME="bdzd Coverage Results" MODIFIED="1541174503219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baiduzhidao" />
+    <SUITE FILE_PATH="coverage/python$bdzd.coverage" NAME="bdzd Coverage Results" MODIFIED="1541175067222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baiduzhidao" />
     <SUITE FILE_PATH="coverage/python$500PX.coverage" NAME="500PX Coverage Results" MODIFIED="1541150848896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -36,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1127" />
+          <entry key="py" value="1130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1127" />
+          <entry key="Python" value="1130" />
         </counts>
       </usages-collector>
     </session>
@@ -67,11 +67,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/baiduzhidao/bdzd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
-                <marker date="1541174500813" expanded="true" signature="392:546" ph="..." />
+                <marker date="1541175060370" expanded="true" signature="382:536" ph="..." />
               </folding>
             </state>
           </provider>
@@ -274,11 +273,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/baiduzhidao/bdzd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
-            <marker date="1541174500813" expanded="true" signature="392:546" ph="..." />
+            <marker date="1541175060370" expanded="true" signature="382:536" ph="..." />
           </folding>
         </state>
       </provider>
