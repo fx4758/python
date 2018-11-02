@@ -19,11 +19,23 @@ def jt_to_ft(line):
     line.encode('utf-8')
     return line
 
+wp_url = 'http://localhost/'
+wp_usr = 'admin'
+wp_mima = '199011'
 
-wp = Client('https://tibetdreamtravel.wordpress.com/xmlrpc.php','aimlokr','910409hbHS')  #办公室111
-post = WordPressPost()
-post.post_status = 'publish'
-post.terms_names ={'category':['西藏旅游问答']}
+wp = Client(str(wp_url)+'xmlrpc.php',str(wp_usr),str(wp_mima))
+
+def post_to_wp(title,content,field):
+    post = WordPressPost()
+    post.post_status = 'publish'
+    post.terms_names ={'category':['西藏旅游问答']}
+
+    post.title = title
+    post.content = content
+    post.custom_fields = field
+
+    post.id = wp.call(posts.NewPost(post))
+    print(str(title) + '\n'+str(wp_url)+'?p=' + str(post.id) + '\n')
 
 #页面单页解析
 def jiexi(url):
@@ -45,11 +57,7 @@ def jiexi(url):
 
         pic_list = re.findall('src="(.*?)"',content)
         for pic in pic_list:
-            date = {
-                'name':str(hash(pic))+'.jpeg',
-                'type':'image/jpeg',
-            }
-            date['bits'] = HTMLSession().get(pic).content
+            date = {'name':str(hash(pic))+'.jpeg','type':'image/jpeg','bits':HTMLSession().get(pic).content}
             repson = wp.call(media.UploadFile(date))
             content = re.sub(pic,repson['url'],content)
             pic_id = []
@@ -62,12 +70,7 @@ def jiexi(url):
             'value':url,
         })
 
-        post.title = title
-        post.content = content
-        post.custom_fields = field
-
-        post.id = wp.call(posts.NewPost(post))
-        print(str(title) + '\nhttps://tibetdreamtravel.wordpress.com/?p=' + str(post.id) + '\n')
+        post_to_wp(title,content,field)
 
     except:
         print('出现异常，跳过。\n\n')
